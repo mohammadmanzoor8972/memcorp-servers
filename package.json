@@ -1,0 +1,38 @@
+{
+  "name": "ecommerce-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node bin/dev",
+    "clean": "rm -rf dist && mkdir dist",
+    "babel-build": "./node_modules/.bin/babel -d ./dist ./src",
+    "build": "npm run clean && npm run babel-build",
+    "start": "npm run build && node bin/prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/mix-project/ecommerce-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/mix-project/ecommerce-site/issues"
+  },
+  "homepage": "https://gitlab.com/mix-project/ecommerce-site#README",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.2",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.1.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
